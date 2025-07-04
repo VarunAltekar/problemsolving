@@ -1,7 +1,6 @@
-package com.slidingwindow;
+package com.twosum;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class TwoSum {
     public static void main(String[] args) {
