@@ -5,7 +5,9 @@ import java.util.Map;
 
 public class ContainsDuplicate2 {
     public static void main(String[] args) {
-        int[] nums = {13,23,1,2,3};
+        //int[] nums = {13,23,1,2,3};
+        int[] nums = {4,5,0,1,1};
+
         System.out.println( containsNearbyDuplicate(nums, 5) );
     }
 
@@ -20,12 +22,15 @@ public class ContainsDuplicate2 {
         for(int i=0; i<nums.length; i++){
             if(res.containsKey(nums[i])){
                 if(Math.abs(i-res.get(nums[i])) <= k)
+                    System.out.println(" value==" +res.get(nums[i]));
                     return true;
             }
             res.put(nums[i], i);
         }
         return false;
     }
+
+
 
 
 }
