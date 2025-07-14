@@ -3,7 +3,7 @@ package com.slidingwindow;
 public class SlidingWindowVariation {
     public static void main(String[] args) {
         int[] nums = {9,4,1,7};
-        maxSumSubArray(nums, 2);
+        maxSumSubArray(nums, 3);
     }
 
     public static void maxSumSubArray(int[] nums, int k) {
@@ -18,7 +18,7 @@ public class SlidingWindowVariation {
 
                 sum = sum - nums[i];
                 i++;
-                j++;
+                j = i+1;
             }
         }
         System.out.println(maxx);
